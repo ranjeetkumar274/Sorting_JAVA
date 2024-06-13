@@ -19,12 +19,11 @@ public class InsertionSort {
         //insertion sort
 
         for(int i = 1; i < n; i++){
-            for(int j = i; j >= 1; j--){
-                if(arr[j] < arr[j-1]){
+            for(int j = i; j >= 1 && (arr[j] < arr[j-1]); j--){  //optimized code
                     int temp = arr[j];
                     arr[j] = arr[j-1];
                     arr[j-1] = temp;
-                }
+
             }
         }
 
